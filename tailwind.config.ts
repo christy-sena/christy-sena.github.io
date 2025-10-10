@@ -14,8 +14,10 @@ export default {
     },
     extend: {
       fontFamily: {
+        // Primary serif stack: prefer Playfair Display, fall back to Cormorant Garamond, then generic serif
         serif: ['Cormorant Garamond', 'serif'],
-        sans: ['DM Sans', 'sans-serif'],
+        // Keep existing sans stack
+        sans: ['Segoe UI', 'sans-serif'],
       },
       fontSize: {
         'hero': ['3.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],

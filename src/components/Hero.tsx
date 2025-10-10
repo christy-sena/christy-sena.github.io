@@ -56,17 +56,20 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-12 leading-relaxed max-w-3xl mx-auto font-light opacity-0 animate-slide-in stagger-1">
-            Risk-adjusted value creation at speed
+            Turning corporate AI ambition into bottom-line results
           </p>
           
           <div className="opacity-0 animate-slide-in stagger-2">
-            <Button 
-              size="lg" 
-              className="bg-primary-foreground hover:bg-primary-foreground/90 text-primary font-semibold px-10 py-6 text-lg rounded-sm shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 group"
+            <a
+              href="#contact"
+              onClick={(e) => {
+                // keep native anchor scroll, no extra JS needed
+              }}
+              className="inline-flex items-center bg-primary-foreground hover:bg-primary-foreground/90 text-primary font-semibold px-10 py-6 text-lg rounded-sm shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 group"
             >
               Get in Touch
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform" />
+            </a>
           </div>
         </div>
       </div>

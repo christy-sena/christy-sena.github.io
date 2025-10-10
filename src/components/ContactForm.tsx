@@ -16,10 +16,27 @@ const ContactForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Compose mailto link with form data
+    const subject = encodeURIComponent('Sena Strategy Inquiry');
+    const bodyLines = [
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      `Organization: ${formData.company}`,
+      '',
+      'Please write your message here...'
+    ];
+    const body = encodeURIComponent(bodyLines.join('\n'));
+    const mailto = `mailto:christy@senastrategy.ai?subject=${subject}&body=${body}`;
+
+    // Open user's email client
+    window.location.href = mailto;
+
     toast({
-      title: "Thank you for your interest!",
-      description: "We'll get back to you within 24 hours to schedule your consultation.",
+      title: "Opening your email client...",
+      description: "A new message will be composed to christy@senastrategy.ai. You can add more details and send when ready.",
     });
+
     setFormData({ name: "", email: "", company: "" });
   };
 
@@ -31,7 +48,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="py-section bg-muted relative overflow-hidden">
+    <section id="contact" className="py-section bg-muted relative overflow-hidden">
       {/* Dynamic Background Elements */}
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-gradient-to-l from-primary/10 to-transparent rounded-full blur-3xl animate-pulse-glow" />
       <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-gradient-to-r from-primary/10 to-transparent rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
