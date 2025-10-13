@@ -17,8 +17,8 @@ const Footer = () => {
             <div className="space-y-3 text-sm text-primary-foreground/70">
               <div className="flex items-center space-x-2 group">
                 <Mail className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" />
-                <a href="mailto:contact@senastrategy.com" className="hover:text-primary-foreground transition-all duration-300 relative">
-                  contact@senastrategy.com
+                <a href="mailto:christy@senastrategy.ai" className="hover:text-primary-foreground transition-all duration-300 relative">
+                  christy@senastrategy.ai
                   <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-primary-foreground group-hover:w-full transition-all duration-300" />
                 </a>
               </div>
