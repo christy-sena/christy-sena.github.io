@@ -1,3 +1,5 @@
+import { jonathan as jonathanImg, christy as christyImg, alex as alexImg } from "@/assets/profile";
+
 const About = () => {
   return (
     <section className="py-section bg-background relative overflow-hidden">
@@ -25,7 +27,7 @@ const About = () => {
           
           <div className="prose prose-lg mx-auto text-center space-y-6">
             <p className="text-lg text-foreground leading-relaxed relative inline-block opacity-0 animate-slide-in stagger-2 group">
-              Board-first AI strategy consultancy that cuts through the noise to deliver measurable cost reduction, revenue growth and governance alignment
+              We are a board-first AI strategy consultancy that cuts through the noise to deliver measurable cost reduction, revenue growth and governance alignment
               {/* <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent group-hover:via-primary/50 transition-colors duration-300" /> */}
             </p>
             {/* <p className="text-lg text-muted-foreground leading-relaxed opacity-0 animate-slide-in stagger-3 hover:text-foreground transition-colors duration-300">
@@ -34,28 +36,27 @@ const About = () => {
           </div>
 
           {/* Team Section */}
-          <div className="mt-16 text-center">
+            <div className="mt-16 text-center">
             <h3 className="text-heading font-serif font-semibold text-primary mb-6">Our Team</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
-              <div className="p-6 bg-card rounded-sm shadow-sm">
-                <div className="h-16 w-16 rounded-full bg-primary-foreground/10 mx-auto mb-4 flex items-center justify-center text-primary font-semibold">J</div>
-                <h4 className="font-semibold">Jonathan</h4>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-16 max-w-6xl mx-auto px-6 md:px-0">
+              <div className="p-10 bg-card rounded-md shadow-sm flex flex-col items-center">
+                <img src={jonathanImg} alt="Jonathan Pfitzner" className="h-28 w-28 rounded-full object-cover mb-4" />
+                <h4 className="font-semibold text-xl">Jonathan Pfitzner</h4>
                 <p className="text-sm text-muted-foreground">Partner</p>
-                <p className="mt-3 text-sm text-foreground">Jonathan leads client strategy and brings decades of advisory experience across technology and governance.</p>
+                <p className="mt-3 text-sm text-foreground">Jonathan has a background spanning corporate strategy, M&A banking, and venture investing, combining strategic depth with a sharp understanding of capital markets and growth dynamics</p>
               </div>
 
-              <div className="p-6 bg-card rounded-sm shadow-sm">
-                <div className="h-16 w-16 rounded-full bg-primary-foreground/10 mx-auto mb-4 flex items-center justify-center text-primary font-semibold">C</div>
-                <h4 className="font-semibold">Christy</h4>
-                <p className="text-sm text-muted-foreground">Consultant</p>
-                <p className="mt-3 text-sm text-foreground">Christy works directly with boards to translate strategy into measurable programmes and stakeholder alignment.</p>
+              <div className="p-10 bg-card rounded-md shadow-sm flex flex-col items-center">
+                <img src={christyImg} alt="Christy Chan" className="h-28 w-28 rounded-full object-cover mb-4" />
+                <h4 className="font-semibold text-xl">Christy Chan</h4>
+                <p className="text-sm text-muted-foreground">Founding Consultant</p>
+                <p className="mt-3 text-sm text-foreground">A former Bain & Company consultant with a background in computer engineering, Christy aims to give boards the technical fluency and strategic clarity needed to lead on AI</p>
               </div>
 
-              <div className="p-6 bg-card rounded-sm shadow-sm">
-                <div className="h-16 w-16 rounded-full bg-primary-foreground/10 mx-auto mb-4 flex items-center justify-center text-primary font-semibold">A</div>
-                <h4 className="font-semibold">Alex</h4>
-                <p className="text-sm text-muted-foreground">Specialist</p>
-                <p className="mt-3 text-sm text-foreground">Alex focuses on technical assessments and pragmatic roadmap delivery to ensure successful implementation.</p>
+              <div className="p-10 bg-card rounded-md shadow-sm flex flex-col items-center">
+                <img src={alexImg} alt="Alex Thacker" className="h-28 w-28 rounded-full object-cover mb-4" />
+                <h4 className="font-semibold text-xl">Alex Thacker</h4>
+                <p className="mt-3 text-sm text-foreground">Having advised leading AI and cybersecurity startups through M&A processes, Alex brings first-hand insight into which technologies and vendors are shaping the market</p>
               </div>
             </div>
           </div>

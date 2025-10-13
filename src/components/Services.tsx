@@ -1,21 +1,21 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { FileText, LineChart, Users } from "lucide-react";
+import { FileText, Zap, MapPin } from "lucide-react";
 
 const services = [
   {
     icon: FileText,
-    title: "Board Advisory",
-    description: "Strategic counsel on AI governance, risk management, and compliance frameworks tailored to your industry."
+    title: "Board AI workshop",
+    description: "Board level diagnostic and prioritisation, to identify pain points and prioritise opportunities"
   },
   {
-    icon: LineChart,
-    title: "Strategic Roadmapping",
-    description: "Data-driven AI implementation plans with clear milestones, resource requirements, and ROI projections."
+    icon: Zap,
+    title: "AI opportunity assessment",
+    description: "Translate pain points into a ranked pipeline, value/risk-mapped aligned to business strategy and competitive positioning"
   },
   {
-    icon: Users,
-    title: "Organizational Readiness",
-    description: "Comprehensive assessments of capabilities, skills gaps, and change management requirements for AI adoption."
+    icon: MapPin,
+    title: "AI strategic roadmap",
+    description: "Translate pipeline into a month roadmap including readiness assessment, tech recommendations, change plan and benchmarks"
   }
 ];
 
@@ -49,8 +49,8 @@ const Services = () => {
               <div className="absolute top-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-primary/50 group-hover:w-full transition-all duration-500" />
               
               <CardHeader className="pb-4 relative z-10">
-                <div className="mb-4 w-12 h-12 border-2 border-primary flex items-center justify-center group-hover:scale-110 group-hover:border-primary-hover group-hover:bg-primary/10 transition-all duration-300">
-                  <service.icon className="h-6 w-6 text-primary group-hover:scale-110 group-hover:text-primary-hover transition-all duration-300" />
+                <div className="mb-6 w-20 h-20 rounded-full border-2 border-primary flex items-center justify-center group-hover:scale-110 group-hover:border-primary-hover group-hover:bg-primary/10 transition-all duration-300 mx-auto">
+                  <service.icon className="h-8 w-8 text-primary group-hover:scale-110 group-hover:text-primary-hover transition-all duration-300" />
                 </div>
                 <CardTitle className="text-subheading font-serif font-semibold text-primary group-hover:text-primary-hover transition-colors duration-300">
                   {service.title}

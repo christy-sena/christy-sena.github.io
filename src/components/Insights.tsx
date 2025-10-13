@@ -28,9 +28,9 @@ const Insights = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16 opacity-0 animate-slide-in">
           <div className="flex justify-center mb-4">
-            <div className="relative group">
-              <TrendingUp className="h-10 w-10 text-primary animate-pulse transition-all duration-300 group-hover:scale-110 group-hover:text-primary-hover" />
-              <div className="absolute inset-0 bg-primary/20 blur-xl animate-pulse-glow group-hover:bg-primary/30 transition-all duration-300" />
+            <div className="relative">
+              <TrendingUp className="h-10 w-10 text-primary" aria-hidden />
+              <div className="absolute inset-0 bg-primary/20 blur-xl transition-all duration-300" />
             </div>
           </div>
           <h2 className="text-display font-serif font-semibold text-primary mb-4 transition-all duration-300 hover:text-primary-hover">
@@ -56,7 +56,7 @@ const Insights = () => {
                   {insight.title}
                 </CardTitle>
                 <CardDescription className="text-sm text-muted-foreground flex items-center gap-2">
-                  <span className="inline-block w-2 h-2 rounded-full bg-primary/30 animate-pulse" />
+                  <span className="inline-block w-2 h-2 rounded-full bg-primary/30" />
                   {insight.date}
                 </CardDescription>
               </CardHeader>
