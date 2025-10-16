@@ -5,17 +5,17 @@ const services = [
   {
     icon: FileText,
     title: "Board AI workshop",
-    description: "Board level diagnostic and prioritisation, to identify pain points and prioritise opportunities"
+    description: "Rapid board-level diagnostic and prioritisation, to identify pain points and prioritise opportunities"
   },
   {
     icon: Zap,
     title: "AI opportunity assessment",
-    description: "Translate pain points into a ranked pipeline, value/risk-mapped aligned to business strategy and competitive positioning"
+    description: "Translate pain points into a ranked, quantified pipeline, value/risk-mapped aligned to business strategy and competitive positioning"
   },
   {
     icon: MapPin,
-    title: "AI strategic roadmap",
-    description: "Translate pipeline into a month roadmap including readiness assessment, tech recommendations, change plan and benchmarks"
+    title: "Strategic AI roadmap",
+    description: "Translate pipeline into a multi-month roadmap including readiness assessment, tech recommendations, change plan and benchmarks"
   }
 ];
 

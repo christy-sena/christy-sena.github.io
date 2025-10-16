@@ -8,7 +8,7 @@ const Footer = () => {
           <div>
             <h3 className="font-serif font-semibold text-2xl mb-4">Sena Strategy</h3>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
-              Independent AI strategy consultants providing pragmatic, compliant, and actionable guidance to boards and executive leadership.
+              Independent AI strategy consultants that turn corporate AI ambition into bottom-line results.
             </p>
           </div>
           
@@ -35,9 +35,9 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4 text-primary-foreground/90">Services</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/70">
-              <li className="hover:text-primary-foreground hover:translate-x-1 transition-all duration-300 cursor-default">Board Advisory</li>
-              <li className="hover:text-primary-foreground hover:translate-x-1 transition-all duration-300 cursor-default">Strategic Roadmapping</li>
-              <li className="hover:text-primary-foreground hover:translate-x-1 transition-all duration-300 cursor-default">Organizational Readiness</li>
+              <li className="hover:text-primary-foreground hover:translate-x-1 transition-all duration-300 cursor-default">Board AI workshop</li>
+              <li className="hover:text-primary-foreground hover:translate-x-1 transition-all duration-300 cursor-default">AI opportunity assessment</li>
+              <li className="hover:text-primary-foreground hover:translate-x-1 transition-all duration-300 cursor-default">Strategic AI roadmap</li>
             </ul>
           </div>
         </div>
