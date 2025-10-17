@@ -3,18 +3,18 @@ import { TrendingUp } from "lucide-react";
 
 const insights = [
   {
-    title: "AI Governance in Financial Services",
-    description: "Navigating regulatory frameworks while maintaining competitive advantage through strategic AI implementation.",
+    title: "What is agentic AI?",
+    description: "An explanation of what agentic AI is, how it differs from generative AI, and why boards and leaders should pay attention.",
     date: "Coming Soon"
   },
   {
-    title: "Board-Level AI Strategy",
-    description: "Key considerations for executive leadership when evaluating AI investments and transformation initiatives.",
+    title: "What are the various forms of AI?",
+    description: "A brief overview of symbolic AI, statistical/machine learning approaches, deep learning, generative models, and emerging agentic systems.",
     date: "Coming Soon"
   },
   {
-    title: "Compliance-First AI Adoption",
-    description: "Building robust AI systems that meet industry standards while driving innovation and operational efficiency.",
+    title: "Are we in an AI bubble?",
+    description: "An assessment of hype versus fundamentals: investment trends, technical progress, and where economic value is being created or overpromised in AI today.",
     date: "Coming Soon"
   }
 ];
@@ -26,7 +26,7 @@ const Insights = () => {
       <div className="absolute inset-0 strategy-grid-pattern opacity-5" />
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16 opacity-0 animate-slide-in">
+  <div className="text-center mb-16">
           <div className="flex justify-center mb-4">
             <div className="relative">
               <TrendingUp className="h-10 w-10 text-primary" aria-hidden />
@@ -54,9 +54,8 @@ const Insights = () => {
                 <CardTitle className="text-xl font-serif font-semibold text-primary mb-2 group-hover:text-primary transition-colors">
                   {insight.title}
                 </CardTitle>
-                <CardDescription className="text-sm text-muted-foreground flex items-center gap-2">
-                  <span className="inline-block w-2 h-2 rounded-full bg-primary/30" />
-                  {insight.date}
+                <CardDescription className="text-sm text-muted-foreground text-left">
+                  <span className="text-xs text-muted-foreground">{insight.date}</span>
                 </CardDescription>
               </CardHeader>
               <CardContent>
