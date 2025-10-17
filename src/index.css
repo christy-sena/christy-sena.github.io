@@ -15,10 +15,14 @@ All colors MUST be HSL.
     --background: 0 0% 100%;
     --foreground: 0 0% 20%;
     
-    /* Racing Green - Primary Brand Color */
-    --primary: 153 100% 13%;
-    --primary-foreground: 0 0% 98%;
-    --primary-hover: 153 100% 18%;
+  /* Racing Green - Primary Brand Color */
+  /* Explicit hex and HSL tokens kept for compatibility. Use --primary-color where a hex value is required. */
+  --primary-color: #004225;
+  --primary-hover-color: #0a5930; /* slightly lighter hex for hover */
+  --primary-hex: #004225;
+  --primary: 153 100% 13%;
+  --primary-foreground: 0 0% 98%;
+  --primary-hover: 153 100% 18%;
     
     /* Metallic Silver & Greys */
     --muted: 0 0% 96%;
@@ -38,12 +42,16 @@ All colors MUST be HSL.
     /* Interactive Elements */
     --border: 0 0% 88%;
     --input: 0 0% 88%;
-    --ring: 153 100% 13%;
+  --ring-hex: #004225;
+  --ring: 153 100% 13%;
     
     /* Racing Green Gradient */
-    --gradient-start: 153 100% 13%;
-    --gradient-mid: 153 100% 20%;
-    --gradient-end: 153 80% 25%;
+  --gradient-start-hex: #004225;
+  --gradient-mid-hex: #005a36;
+  --gradient-end-hex: #2f7a57;
+  --gradient-start: 153 100% 13%;
+  --gradient-mid: 153 100% 20%;
+  --gradient-end: 153 80% 25%;
     
     /* Shadows & Effects */
     --shadow-soft: 0 0% 20% / 0.08;
@@ -70,7 +78,8 @@ All colors MUST be HSL.
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 153 100% 13%;
+  --sidebar-ring-hex: #004225;
+  --sidebar-ring: 153 100% 13%;
   }
 
   .dark {

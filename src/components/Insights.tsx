@@ -30,7 +30,6 @@ const Insights = () => {
           <div className="flex justify-center mb-4">
             <div className="relative">
               <TrendingUp className="h-10 w-10 text-primary" aria-hidden />
-              <div className="absolute inset-0 bg-primary/20 blur-xl transition-all duration-300" />
             </div>
           </div>
           <h2 className="text-display font-serif font-semibold text-primary mb-4 transition-all duration-300 hover:text-primary-hover">

@@ -32,9 +32,10 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          // Use hex-based var for exact match across the app
+          DEFAULT: "var(--primary-color)",
           foreground: "hsl(var(--primary-foreground))",
-          hover: "hsl(var(--primary-hover))",
+          hover: "var(--primary-hover-color, hsl(var(--primary-hover)))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
