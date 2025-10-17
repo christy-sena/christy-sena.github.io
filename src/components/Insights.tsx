@@ -55,7 +55,7 @@ const Insights = () => {
                   {insight.title}
                 </CardTitle>
                 <CardDescription className="text-sm text-muted-foreground text-left">
-                  <span className="text-xs text-muted-foreground">{insight.date}</span>
+                  <span className="uppercase tracking-wide text-sm font-medium text-muted-foreground/85">{insight.date}</span>
                 </CardDescription>
               </CardHeader>
               <CardContent>

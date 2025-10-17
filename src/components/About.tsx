@@ -39,21 +39,21 @@ const About = () => {
             <div className="mt-16 text-center">
             <h3 className="text-heading font-serif font-semibold text-primary mb-6">Our Team</h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-16 max-w-6xl mx-auto px-6 md:px-0">
-              <div className="p-10 bg-card rounded-md shadow-sm flex flex-col items-center">
+              <div className="p-10 bg-card rounded-md shadow-lg flex flex-col items-center">
                 <img src={jonathanImg} alt="Jonathan Pfitzner" className="h-28 w-28 rounded-full object-cover mb-4" />
                 <h4 className="font-semibold text-xl">Jonathan Pfitzner</h4>
                 <p className="text-sm text-muted-foreground">Partner</p>
                 <p className="mt-3 text-sm text-foreground">Jonathan has a background spanning corporate strategy, M&A banking, and venture investing, combining strategic depth with a sharp understanding of capital markets and growth dynamics</p>
               </div>
 
-              <div className="p-10 bg-card rounded-md shadow-sm flex flex-col items-center">
+              <div className="p-10 bg-card rounded-md shadow-lg flex flex-col items-center">
                 <img src={christyImg} alt="Christy Chan" className="h-28 w-28 rounded-full object-cover mb-4" />
                 <h4 className="font-semibold text-xl">Christy Chan</h4>
                 <p className="text-sm text-muted-foreground">Founding Consultant</p>
                 <p className="mt-3 text-sm text-foreground">A former Bain & Company consultant with a background in computer engineering, Christy aims to give boards the technical fluency and strategic clarity needed to lead on AI</p>
               </div>
 
-              <div className="p-10 bg-card rounded-md shadow-sm flex flex-col items-center">
+              <div className="p-10 bg-card rounded-md shadow-lg flex flex-col items-center">
                 <img src={alexImg} alt="Alex Thacker" className="h-28 w-28 rounded-full object-cover mb-4" />
                 <h4 className="font-semibold text-xl">Alex Thacker</h4>
                 <p className="mt-3 text-sm text-foreground">Having advised leading AI and cybersecurity startups through M&A processes, Alex brings first-hand insight into which technologies and vendors are shaping the market</p>
