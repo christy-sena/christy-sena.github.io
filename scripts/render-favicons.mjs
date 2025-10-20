@@ -14,6 +14,9 @@ const tasks = [
   { name: 'favicon-180.png', size: 180, text: 'Sena' }
 ]
 
+// super high resolution for retina/display use
+tasks.push({ name: 'favicon-2048.png', size: 2048, text: 'Sena' })
+
 function htmlFor(size, text) {
   // font-size tuned per size for visual balance
   const fontSize = Math.round(size * (text.length > 1 ? 0.32 : 0.6))

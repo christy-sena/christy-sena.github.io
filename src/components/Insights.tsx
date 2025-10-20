@@ -33,7 +33,7 @@ const Insights = () => {
             </div>
           </div>
           <h2 className="text-display font-serif font-semibold text-primary mb-4 transition-all duration-300 hover:text-primary-hover">
-            Insights & Thought Leadership
+            Insights
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Strategic perspectives on AI governance and implementation
