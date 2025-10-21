@@ -27,14 +27,14 @@ const ContactForm = () => {
       'Please write your message here...'
     ];
     const body = encodeURIComponent(bodyLines.join('\n'));
-    const mailto = `mailto:christy@senastrategy.ai?subject=${subject}&body=${body}`;
+  const mailto = `mailto:contact@senastrategy.ai?subject=${subject}&body=${body}`;
 
     // Open user's email client
     window.location.href = mailto;
 
     toast({
       title: "Opening your email client...",
-      description: "A new message will be composed to christy@senastrategy.ai. You can add more details and send when ready.",
+      description: "A new message will be composed to contact@senastrategy.ai. You can add more details and send when ready.",
     });
 
     setFormData({ name: "", email: "", company: "" });

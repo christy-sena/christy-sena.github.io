@@ -42,7 +42,7 @@ const Privacy = () => {
 
         <h2 className="font-semibold mt-6 mb-2">Your Rights</h2>
         <p className="text-foreground mb-4">
-          Depending on your jurisdiction, you may have rights to access, rectify, or delete your personal information and to restrict or object to certain processing. To exercise these rights, please contact us at christy@senastrategy.ai.
+          Depending on your jurisdiction, you may have rights to access, rectify, or delete your personal information and to restrict or object to certain processing. To exercise these rights, please contact us at contact@senastrategy.ai.
         </p>
 
         <h2 className="font-semibold mt-6 mb-2">GDPR and UK/EU Specifics</h2>
@@ -70,7 +70,7 @@ const Privacy = () => {
         </p>
 
         <h2 className="font-semibold mt-6 mb-2">Contact</h2>
-        <p className="text-foreground">For privacy questions or to exercise your rights, please contact us at christy@senastrategy.ai.</p>
+  <p className="text-foreground">For privacy questions or to exercise your rights, please contact us at contact@senastrategy.ai.</p>
       </div>
     </section>
   );
