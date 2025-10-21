@@ -36,14 +36,7 @@ const Hero = () => {
         />
       ))}
       
-      {/* Animated Horizon Lines */}
-      <div className="absolute inset-0 flex items-center justify-center opacity-20">
-        <div className="w-full h-px bg-gradient-to-r from-transparent via-primary-foreground to-transparent animate-pulse" />
-      </div>
-      <div className="absolute inset-0 flex items-start pt-32 justify-center opacity-10">
-        <div className="w-3/4 h-px bg-gradient-to-r from-transparent via-primary-foreground to-transparent" 
-             style={{ animationDelay: '1s' }} />
-      </div>
+      {/* Removed the two horizon line elements to avoid stray lines outside the grid */}
       
       {/* Radial Glow Effect */}
       <div className="absolute inset-0 bg-gradient-radial from-primary-foreground/5 via-transparent to-transparent" />
