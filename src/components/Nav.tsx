@@ -20,8 +20,8 @@ const Nav = () => {
 
   return (
     <>
-      {/* Mobile top bar with burger */}
-      <div className="fixed top-4 right-4 z-50 md:hidden">
+      {/* Top-left burger (visible on all sizes) */}
+      <div className="fixed top-4 left-4 z-50">
         <button
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen(o => !o)}
@@ -58,24 +58,7 @@ const Nav = () => {
         </nav>
       </div>
 
-      {/* Desktop vertical icon bar */}
-      <aside className="hidden md:flex fixed left-6 top-1/3 z-40 flex-col items-center gap-3">
-        <div className="bg-background/70 backdrop-blur rounded-full p-2 shadow-md">
-          <ul className="flex flex-col gap-2">
-            {sections.map(s => (
-              <li key={s.id}>
-                <button
-                  onClick={() => onNavigate(s.id)}
-                  title={s.label}
-                  className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/5 transition-colors"
-                >
-                  <span className="text-primary-foreground">{s.icon}</span>
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </aside>
+      {/* Desktop icon bar removed; top-left burger now controls navigation for all sizes */}
     </>
   );
 };
