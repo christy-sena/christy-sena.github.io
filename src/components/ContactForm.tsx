@@ -10,41 +10,14 @@ const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    company: ""
+    company: "",
+    message: ""
   });
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    // Compose mailto link with form data
-    const subject = encodeURIComponent('Sena Strategy Inquiry');
-    const bodyLines = [
-      `Name: ${formData.name}`,
-      `Email: ${formData.email}`,
-      `Organization: ${formData.company}`,
-      '',
-      'Please write your message here...'
-    ];
-    const body = encodeURIComponent(bodyLines.join('\n'));
-  const mailto = `mailto:contact@senastrategy.ai?subject=${subject}&body=${body}`;
-
-    // Open user's email client
-    window.location.href = mailto;
-
-    toast({
-      title: "Opening your email client...",
-      description: "A new message will be composed to contact@senastrategy.ai. You can add more details and send when ready.",
-    });
-
-    setFormData({ name: "", email: "", company: "" });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
+  const [loading, setLoading] = useState(false);
+  const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   return (
@@ -78,14 +51,23 @@ const ContactForm = () => {
               </CardDescription>
             </CardHeader>
             <CardContent className="relative z-10">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                action="https://formspree.io/f/movkojwz"
+                method="POST"
+                encType="multipart/form-data"
+                className="space-y-6"
+                onSubmit={() => setLoading(true)}
+              >
+                {/* Formspree hidden inputs: redirect back to hash route after submit */}
+                <input type="hidden" name="_next" value={`${window.location.origin}${window.location.pathname}#/`} />
+                <input type="hidden" name="_captcha" value="false" />
                 <div className="space-y-2 group/input">
                   <Label htmlFor="name" className="group-focus-within/input:text-primary transition-colors">Full Name</Label>
                   <Input
                     id="name"
                     name="name"
                     value={formData.name}
-                    onChange={handleChange}
+                    onChange={onChange}
                     placeholder="Your full name"
                     required
                     className="rounded-sm border-border focus:border-primary transition-colors"
@@ -99,7 +81,7 @@ const ContactForm = () => {
                     name="email"
                     type="email"
                     value={formData.email}
-                    onChange={handleChange}
+                    onChange={onChange}
                     placeholder="your.email@company.com"
                     required
                     className="rounded-sm border-border focus:border-primary transition-colors"
@@ -112,18 +94,32 @@ const ContactForm = () => {
                     id="company"
                     name="company"
                     value={formData.company}
-                    onChange={handleChange}
+                    onChange={onChange}
                     placeholder="Your organization name"
                     required
                     className="rounded-sm border-border focus:border-primary transition-colors"
                   />
                 </div>
+
+                <div className="space-y-2 group/input">
+                  <Label htmlFor="message" className="group-focus-within/input:text-primary transition-colors">Message</Label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={onChange}
+                    placeholder="Tell us about your project, goals, or questions"
+                    className="w-full min-h-[120px] rounded-sm border-border focus:border-primary transition-colors p-3 bg-transparent"
+                    required
+                  />
+                </div>
                 
                 <Button 
                   type="submit" 
-                  className="w-full bg-primary hover:bg-primary-hover text-primary-foreground font-semibold py-6 rounded-sm text-lg transition-all duration-300 hover:shadow-lg hover:scale-[1.02] group/button"
+                  disabled={loading}
+                  className="w-full bg-primary hover:bg-primary-hover text-primary-foreground font-semibold py-6 rounded-sm text-lg transition-all duration-300 hover:shadow-lg hover:scale-[1.02] group/button disabled:opacity-60"
                 >
-                  Submit Inquiry
+                  {loading ? 'Sending...' : 'Submit Inquiry'}
                   <ArrowRight className="ml-2 h-5 w-5 group-hover/button:translate-x-1 transition-transform" />
                 </Button>
               </form>

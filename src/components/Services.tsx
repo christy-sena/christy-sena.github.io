@@ -21,7 +21,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="py-section bg-muted relative overflow-hidden">
+    <section id="services" className="py-section bg-muted relative overflow-hidden">
       {/* Background Accent */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl" />
       

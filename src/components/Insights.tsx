@@ -21,7 +21,7 @@ const insights = [
 
 const Insights = () => {
   return (
-    <section className="py-section bg-background relative overflow-hidden">
+    <section id="insights" className="py-section bg-background relative overflow-hidden">
       {/* Animated Background Grid */}
       <div className="absolute inset-0 strategy-grid-pattern opacity-5" />
       

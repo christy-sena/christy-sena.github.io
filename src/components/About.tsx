@@ -2,7 +2,7 @@ import { jonathan as jonathanImg, christy as christyImg, alex as alexImg } from 
 
 const About = () => {
   return (
-    <section className="py-section bg-background relative overflow-hidden">
+    <section id="about" className="py-section bg-background relative overflow-hidden">
   {/* Dynamic Background Elements (static — pulse removed) */}
   <div className="absolute top-0 right-1/4 w-96 h-96 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-3xl" />
   <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-to-tr from-primary/10 to-transparent rounded-full blur-3xl" style={{ animationDelay: '1s' }} />

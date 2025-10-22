@@ -38,7 +38,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-primary-foreground/50">
           <p>&copy; {new Date().getFullYear()} Sena Strategy. All rights reserved.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
-            <a href="/privacy" className="hover:text-primary-foreground/70 transition-all duration-300 relative group">
+            <a href="/#/privacy" className="hover:text-primary-foreground/70 transition-all duration-300 relative group">
               Privacy Policy
               <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-primary-foreground/70 group-hover:w-full transition-all duration-300" />
             </a>
