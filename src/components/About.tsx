@@ -27,12 +27,10 @@ const About = () => {
           
           <div className="prose prose-lg mx-auto text-center space-y-6">
             <p className="text-lg text-foreground leading-relaxed relative inline-block opacity-0 animate-slide-in stagger-2 group">
-              We are a board-first AI strategy consultancy that cuts through the noise to deliver measurable cost reduction, revenue growth and governance alignment
-              {/* <span className="absolute -bottom-2 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent group-hover:via-primary/50 transition-colors duration-300" /> */}
+              We are an AI-native strategy firm helping boards translate AI potential into measurable value through independent, financially-grounded consultancy.
             </p>
-            {/* <p className="text-lg text-muted-foreground leading-relaxed opacity-0 animate-slide-in stagger-3 hover:text-foreground transition-colors duration-300">
-              With a heritage of foresight and clarity, we guide boards through the complexities of AI adoption with pragmatic, compliant, and actionable strategies.
-            </p> */}
+            <p className="text-lg text-foreground leading-relaxed relative inline-block opacity-0 animate-slide-in stagger-2 group">
+              Our team combines deep experience in AI consulting, corporate strategy, and banking. We link AI opportunity with operational efficiency, revenue uplift, and cost discipline.        </p>
           </div>
 
           {/* Team Section */}
@@ -43,20 +41,20 @@ const About = () => {
                 <img src={jonathanImg} alt="Jonathan Pfitzner" className="h-28 w-28 rounded-full object-cover mb-4" />
                 <h4 className="font-semibold text-xl">Jonathan Pfitzner</h4>
                 <p className="text-sm text-muted-foreground">Partner</p>
-                <p className="mt-3 text-sm text-foreground">Jonathan has a background spanning corporate strategy, M&A banking, and venture investing, combining strategic depth with a sharp understanding of capital markets and growth dynamics</p>
+                <p className="mt-3 text-sm text-foreground">With extensive experience across corporate strategy, M&A banking, and venture investing, Jonathan combines strategic insight with a deep understanding of technology transitions and growth markets.</p>
               </div>
 
               <div className="p-10 bg-card rounded-md shadow-lg flex flex-col items-center">
                 <img src={christyImg} alt="Christy Chan" className="h-28 w-28 rounded-full object-cover mb-4" />
                 <h4 className="font-semibold text-xl">Christy Chan</h4>
                 <p className="text-sm text-muted-foreground">Founding Consultant</p>
-                <p className="mt-3 text-sm text-foreground">A former Bain & Company consultant with a background in computer engineering, Christy aims to give boards the technical fluency and strategic clarity needed to lead on AI</p>
+                <p className="mt-3 text-sm text-foreground">A former Bain consultant with a background in computer engineering, Christy helps boards build the technical fluency and strategic clarity needed to lead on AI, translating complex technology trends into actionable decisions.</p>
               </div>
 
               <div className="p-10 bg-card rounded-md shadow-lg flex flex-col items-center">
                 <img src={alexImg} alt="Alex Thacker" className="h-28 w-28 rounded-full object-cover mb-4" />
                 <h4 className="font-semibold text-xl">Alex Thacker</h4>
-                <p className="mt-3 text-sm text-foreground">Having advised leading AI and cybersecurity startups through M&A processes, Alex brings first-hand insight into which technologies and vendors are shaping the market</p>
+                <p className="mt-3 text-sm text-foreground">With specialisms in AI, data and cybersecurity, Alex is an M&A advisor and venture investor. He brings first-hand insight into which technologies and vendors are shaping the market, aligning strategic priorities with investment readiness.</p>
               </div>
             </div>
           </div>

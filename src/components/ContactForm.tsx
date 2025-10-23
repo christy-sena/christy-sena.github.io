@@ -30,10 +30,10 @@ const ContactForm = () => {
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12 opacity-0 animate-slide-in">
             <h2 className="text-display font-serif font-semibold text-primary mb-4 hover:text-primary-hover transition-colors duration-300">
-              Begin Your Strategy Journey
+              Begin your strategy journey
             </h2>
             <p className="text-lg text-muted-foreground">
-              Connect with our team to discuss your AI governance and strategy needs
+              Connect with our team to discuss your AI strategy and governance needs
             </p>
           </div>
           
@@ -45,7 +45,7 @@ const ContactForm = () => {
             <div className="absolute top-0 left-0 w-0 h-0.5 bg-gradient-to-r from-transparent via-primary/50 to-transparent group-hover:w-full transition-all duration-500" />
             
             <CardHeader className="text-center relative z-10">
-              <CardTitle className="text-heading font-serif">Contact Us</CardTitle>
+              <CardTitle className="text-heading font-serif">Contact us</CardTitle>
               <CardDescription>
                 Schedule a confidential consultation with our advisory team
               </CardDescription>
@@ -119,7 +119,7 @@ const ContactForm = () => {
                   disabled={loading}
                   className="w-full bg-primary hover:bg-primary-hover text-primary-foreground font-semibold py-6 rounded-sm text-lg transition-all duration-300 hover:shadow-lg hover:scale-[1.02] group/button disabled:opacity-60"
                 >
-                  {loading ? 'Sending...' : 'Submit Inquiry'}
+                  {loading ? 'Sending...' : 'Submit'}
                   <ArrowRight className="ml-2 h-5 w-5 group-hover/button:translate-x-1 transition-transform" />
                 </Button>
               </form>

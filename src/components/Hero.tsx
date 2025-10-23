@@ -52,7 +52,7 @@ const Hero = () => {
             Turning corporate AI ambition into bottom-line results
           </p>
           
-          <div className="opacity-0 animate-slide-in stagger-2">
+          {/* <div className="opacity-0 animate-slide-in stagger-2">
             <a
               href="#contact"
               onClick={(e) => {
@@ -63,7 +63,7 @@ const Hero = () => {
               Get in Touch
               <ArrowRight className="ml-2 h-5 w-5 transition-transform" />
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
       
