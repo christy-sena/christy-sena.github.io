@@ -17,6 +17,12 @@ const tasks = [
 // super high resolution for retina/display use
 tasks.push({ name: 'favicon-2048.png', size: 2048, text: 'Sena' })
 
+// Open Graph / social preview images
+// 1200x630 is a common OG size for LinkedIn/Facebook previews
+tasks.push({ name: 'og-1200x630.png', size: 1200, text: 'S' , viewport: { width: 1200, height: 630 }})
+// square high res for platforms that use square previews
+tasks.push({ name: 'og-2048-square.png', size: 2048, text: 'S', viewport: { width: 2048, height: 2048 }})
+
 function htmlFor(size, text) {
   // font-size tuned per size for visual balance
   const fontSize = Math.round(size * (text.length > 1 ? 0.32 : 0.6))
