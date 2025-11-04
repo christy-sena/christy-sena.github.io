@@ -10,6 +10,86 @@ import { useEffect } from 'react';
 const FormsOfAI = () => {
   const { readingProgress, scrollToSection } = useArticleScroll();
 
+  // Ensure the article opens at the top when navigated to
+  useEffect(() => {
+    try {
+      // If there's an intentional target stored (goToHomeAndScroll), don't override it
+      if (!sessionStorage.getItem('sena:scrollTo')) {
+        window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+      }
+    } catch (e) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    }
+  }, []);
+
+  // Set page title and Open Graph / Twitter meta for this article while mounted.
+  useEffect(() => {
+    const articleTitle = 'The strategic taxonomy of AI: from rules to reasoning';
+    const articleDesc = "The strategic taxonomy of AI: which forms of AI deliver value, their governance and deployment considerations.";
+
+    const prevTitle = document.title;
+
+    // helper to upsert meta tags and remember previous content
+    function upsertMeta(attrName: 'name' | 'property', key: string, value: string) {
+      const selector = `meta[${attrName}="${key}"]`;
+      let el = document.querySelector(selector) as HTMLMetaElement | null;
+      const created = !el;
+      const prev = el ? el.getAttribute('content') : null;
+      if (!el) {
+        el = document.createElement('meta');
+        el.setAttribute(attrName, key);
+        document.head.appendChild(el);
+      }
+      el.setAttribute('content', value);
+      return { el, prev, created };
+    }
+
+    function upsertLink(rel: string, href: string) {
+      let el = document.querySelector(`link[rel="${rel}"]`) as HTMLLinkElement | null;
+      const created = !el;
+      const prev = el ? el.getAttribute('href') : null;
+      if (!el) {
+        el = document.createElement('link');
+        el.setAttribute('rel', rel);
+        document.head.appendChild(el);
+      }
+      el.setAttribute('href', href);
+      return { el, prev, created };
+    }
+
+    document.title = `${articleTitle} — Sena Strategy`;
+
+    const metas: Array<ReturnType<typeof upsertMeta>> = [];
+    metas.push(upsertMeta('name', 'description', articleDesc));
+    metas.push(upsertMeta('property', 'og:title', `${articleTitle} — Sena Strategy`));
+    metas.push(upsertMeta('property', 'og:description', articleDesc));
+    metas.push(upsertMeta('property', 'og:type', 'article'));
+    metas.push(upsertMeta('property', 'og:image', '/og-1200x630.png'));
+    metas.push(upsertMeta('name', 'twitter:title', `${articleTitle} — Sena Strategy`));
+    metas.push(upsertMeta('name', 'twitter:description', articleDesc));
+    metas.push(upsertMeta('name', 'twitter:image', '/og-1200x630.png'));
+
+    const canonical = upsertLink('canonical', window.location.href.split('#')[0] + '#/insights/forms-of-ai');
+
+    return () => {
+      // restore title
+      document.title = prevTitle;
+
+      // restore metas
+      metas.forEach(m => {
+        if (m.el) {
+          if (m.created && m.el.parentNode) m.el.parentNode.removeChild(m.el);
+          else if (m.prev !== null) m.el.setAttribute('content', m.prev);
+        }
+      });
+
+      if (canonical.el) {
+        if (canonical.created && canonical.el.parentNode) canonical.el.parentNode.removeChild(canonical.el);
+        else if (canonical.prev !== null) canonical.el.setAttribute('href', canonical.prev);
+      }
+    };
+  }, []);
+
   useEffect(() => {
     // Apply global scrollbar styles
     const style = document.createElement('style');
