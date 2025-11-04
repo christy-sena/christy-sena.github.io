@@ -20,6 +20,7 @@ const FormsOfAI = () => {
       * { scrollbar-color: #1E1E1E transparent; scrollbar-width: thin; }
     `;
     document.head.appendChild(style);
+    document.title = "The strategic taxonomy of AI — Sena Strategy";
     return () => {
       document.head.removeChild(style);
     };
@@ -49,8 +50,8 @@ const FormsOfAI = () => {
             <div className="mt-6 flex items-center gap-4">
               <img src={christy} alt="Author" className="h-12 w-12 rounded-full object-cover" />
               <div>
-                <div className="text-sm font-semibold">Christy Chan</div>
-                <div className="text-xs text-muted-foreground">Founding Consultant - Sena Strategy</div>
+                <div className="text-s font-semibold">Christy Chan</div>
+                <div className="text-sm text-muted-foreground">Founding Consultant - Sena Strategy</div>
               </div>
             </div>
 
@@ -87,12 +88,12 @@ const FormsOfAI = () => {
             </div>
           </header>
 
-          <ArticleSection id="overview" title="Introduction">
+          <ArticleSection id="overview" title="Introduction" className="py-4 md:py-4">
             <p className="text-muted-foreground">AI now spans five distinct forms of intelligence, from systems that follow rules to systems that reason and act. Understanding these isn't academic; it's essential for deciding where automation, creativity, and governance deliver the greatest value.</p>
             <p className="mt-3 text-muted-foreground">At Sena Strategy, we frame AI's evolution as a progression in decision‑making: from codified expertise, to pattern recognition, to autonomous orchestration. Each step changes what leaders can delegate to machines and what must remain human.</p>
           </ArticleSection>
 
-          <ArticleSection id="types-of-ai" title="Types of AI" className="mt-10">
+          <ArticleSection id="types-of-ai" title="Types of AI" className="py-4 md:py-4">
 
             <h3 id="symbolic-ai" className="mt-6 text-xl font-semibold">Symbolic AI: Codified expertise</h3>
             <p className="mt-2 text-muted-foreground">Symbolic AI encodes human expertise as logical rules: if these conditions exist, then take this action. These systems dominated early AI precisely because they mirror how we naturally structure problems. Rather than learning from data, they execute explicit instructions programmed by domain experts, making every decision traceable to specific rules. Massachusetts General Hospital’s DXplain system, developed in 1984 and still operational today, helped one teaching hospital save &gt;$1000 in charges per admission in diagnostically challenging cases.</p>
@@ -133,7 +134,7 @@ const FormsOfAI = () => {
             <p className="mt-2 text-muted-foreground"><strong>Best suited to</strong>: Professional services, marketing, software development, research where accelerating first-draft production creates measurable time savings.</p>
 
             <h3 id="agentic-ai" className="mt-6 text-xl font-semibold">Agentic AI: Autonomous orchestration</h3>
-            <p className="mt-2 text-muted-foreground">Whereas generative AI creates content reactively, agentic systems manage entire workflows proactively. They pursue goals autonomously, making decisions, taking actions, and adapting strategies based on results. These systems break complex objectives into executable steps, use tools and APIs to interact with external systems, monitor progress, and adjust approaches when circumstances change. This represents a fundamental shift from assistance to autonomous execution. Agentic AI maintains persistent focus on objectives over extended timeframes, orchestrating multiple steps without continuous human direction.</p>
+            <p className="mt-2 text-muted-foreground">Whereas generative AI creates content reactively, agentic systems manage entire workflows proactively. They pursue goals autonomously, making decisions, taking actions, and adapting strategies based on results. These systems break complex objectives into executable steps, use tools and APIs to interact with external systems, monitor progress, and adjust approaches when circumstances change. This represents a fundamental shift from assistance to autonomous execution. Agentic AI maintains persistent focus on objectives over extended timeframes, orchestrating multiple steps without continuous human direction. Fiserv, a leading global FinTech, used agentic AI to streamline merchant category code determination and validation, saving 12,000 hours through these automations.</p>
 
             <p className="mt-2 text-muted-foreground"><strong>Agentic AI is strongest when</strong>: Complex workflows require coordination across systems, processes demand persistent execution over time, or manual orchestration creates bottlenecks.</p>
 
@@ -142,8 +143,9 @@ const FormsOfAI = () => {
             <p className="mt-2 text-muted-foreground"><strong>Best suited to</strong>: Document processing, customer onboarding, workflow automation where end-to-end orchestration creates step-change improvements in capacity or speed.</p>
           </ArticleSection>
 
-          <ArticleSection id="deploy" title="How should you deploy these?" className="mt-10">
-            <p className="text-muted-foreground">These approaches aren't mutually exclusive. Leading organisations orchestrate them strategically, recognising that each carries distinct governance, cost, and value profiles.</p>
+          <ArticleSection id="deploy" title="How should you deploy these?" className="py-4 md:py-4">
+            <p className="text-muted-foreground">Consider how leading organisations now operate: A single fraud analyst who once reviewed 50 transactions daily now oversees systems processing 50,000. Radiologists who spent hours reviewing scans now focus on complex diagnostic decisions while AI handles initial screening. Customer service teams that managed 100 conversations now orchestrate 10,000, with AI handling routine inquiries and escalating nuanced cases to humans.</p>
+            <p className="text-muted-foreground">This isn't about replacing people - it's about fundamentally expanding what's possible. These approaches aren't mutually exclusive. Leading organisations orchestrate them strategically, recognising that each carries distinct governance, cost, and value profiles.</p>
 
             <ul className="mt-3 list-disc list-inside text-muted-foreground space-y-2">
               <li><strong>Symbolic AI</strong>: remains valuable where transparency and explicit reasoning matter, e.g. regulatory compliance, safety-critical systems, or domains with clear rules.</li>
@@ -156,24 +158,25 @@ const FormsOfAI = () => {
             <p className="mt-4 text-muted-foreground">Understanding these distinctions cuts through vendor marketing to focus on measurable enterprise value. At Sena Strategy, we help boards and investors determine which form of AI aligns with their business model and risk appetite, and design adoption paths that convert technology capability into measurable results.</p>
           </ArticleSection>
 
-          <ArticleSection id="references" title="References & Further Reading" className="mt-10 mb-8">
+          <ArticleSection id="references" title="References & Further Reading" className="mt-0 mb-0 py-4">
             <ul className="list-disc list-inside text-muted-foreground space-y-2">
-              <li><a className="underline" href="https://www.sciencedirect.com/science/article/abs/pii/S1386505610001620" target="_blank" rel="noreferrer">MassGen DXplain (case)</a></li>
-              <li><a className="underline" href="https://emerj.com/artificial-intelligence-at-paypal/" target="_blank" rel="noreferrer">PayPal fraud detection writeup</a></li>
-              <li><a className="underline" href="https://digitaldefynd.com/IQ/ai-use-in-manufacturing-case-studies/" target="_blank" rel="noreferrer">Intel semiconductor use cases</a></li>
-              <li><a className="underline" href="https://www.bcg.com/publications/2023/how-people-create-and-destroy-value-with-gen-ai" target="_blank" rel="noreferrer">BCG — Gen AI performance improvement</a></li>
-              <li><a className="underline" href="https://www.harvey.ai/customers/a-and-o-shearman" target="_blank" rel="noreferrer">A&O Shearman — contract review example</a></li>
+              <li><a className="underline" href="https://www.sciencedirect.com/science/article/abs/pii/S1386505610001620" target="_blank" rel="noreferrer">MassGen DXplain</a></li>
+              <li><a className="underline" href="https://emerj.com/artificial-intelligence-at-paypal/" target="_blank" rel="noreferrer">PayPal fraud detection</a></li>
+              <li><a className="underline" href="https://digitaldefynd.com/IQ/ai-use-in-manufacturing-case-studies/" target="_blank" rel="noreferrer">Intel semiconductor defect detection</a></li>
+              <li><a className="underline" href="https://www.bcg.com/publications/2023/how-people-create-and-destroy-value-with-gen-ai" target="_blank" rel="noreferrer">BCG Gen AI performance improvement</a></li>
+              <li><a className="underline" href="https://diginomica.com/uipaths-agentic-automation-strategy-moving-enterprise-ai-beyond-productivity-plateau" target="_blank" rel="noreferrer">Fiserv agentic payment automation</a></li>
             </ul>
           </ArticleSection>
 
           {/* About the author card (keep our styled card) */}
-          <Card className="mt-12 p-6 bg-card">
+          <Card className="mt-0 p-6 bg-card">
             <div className="flex items-center gap-4">
               <img src={christy} alt="Christy Chan" className="h-16 w-16 rounded-full object-cover" />
               <div>
                 <div className="font-semibold">About the author</div>
-                <div className="text-sm font-semibold mt-2">Christy Chan</div>
-                <div className="text-sm text-muted-foreground mt-1">A former Bain consultant with a background in computer engineering from Imperial College, Christy helps boards build the technical fluency and strategic clarity needed to lead on AI. She has advised global organisations on generative AI strategic planning and cybersecurity transformation, among other projects.</div>
+                <div className="text-s font-semibold mt-2">Christy Chan</div>
+                <div className="text-sm text-muted-foreground">Founding Consultant</div>
+                <div className="text-sm text-muted-foreground mt-2">A former Bain consultant with a background in computer engineering from Imperial College, Christy helps boards build the technical fluency and strategic clarity needed to lead on AI. She has advised global organisations on generative AI strategic planning and cybersecurity transformation, among other projects.</div>
               </div>
             </div>
           </Card>
