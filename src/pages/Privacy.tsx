@@ -1,6 +1,24 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const Privacy = () => {
+  useEffect(() => {
+    // Add a temporary meta robots noindex for this page while mounted
+    let meta: HTMLMetaElement | null = document.querySelector('meta[name="robots"]');
+    const created = !meta;
+    if (created) {
+      meta = document.createElement('meta');
+      meta.name = 'robots';
+      document.head.appendChild(meta);
+    }
+    const prev = meta.getAttribute('content');
+    meta.setAttribute('content', 'noindex');
+    return () => {
+      if (!meta) return;
+      if (prev !== null) meta.setAttribute('content', prev);
+      else if (created && meta.parentNode) meta.parentNode.removeChild(meta);
+    };
+  }, []);
   return (
     <section className="py-section bg-background">
       <div className="container mx-auto px-6 max-w-4xl">
