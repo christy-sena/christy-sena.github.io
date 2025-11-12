@@ -147,7 +147,7 @@ const AIBubble = () => {
 
           <ArticleSection id="introduction" title="Introduction" className="py-4 md:py-4">
             <p className="text-muted-foreground">We are witnessing classic bubble dynamics. AI valuations have detached from fundamentals, tech giants are deploying hundreds of billions in infrastructure spending, and market sentiment mirrors 1999's dot-com fever. OpenAI's $500 billion valuation despite burning $8 billion annually exemplifies the disconnect.</p>
-            <p className="mt-3 text-muted-foreground">Yet AI is also delivering measurable value. Enterprise adoption rose from 55% in 2023 to 75% in 2024. Companies report 3.7x average returns, with productivity gains of 10-55% in customer service and 26-56% faster software development. Data centers reach full utilization immediately upon opening.</p>
+            <p className="mt-3 text-muted-foreground">Yet AI is also delivering measurable value. Enterprise adoption rose from 55% in 2023 to 75% in 2024. Companies report 3.7x average returns, with productivity gains of 10-55% in customer service and 26-56% faster software development. Data centers reach full utilisation immediately upon opening.</p>
             <p className="mt-3 text-muted-foreground">The complexity emerges because three distinct forces are operating simultaneously, each on different timelines, affecting different stakeholders differently. Most analyses collapse these forces together, creating confusion. Understanding which force drives your specific decisions determines whether your AI strategy creates value or destroys it.</p>
             <p className="mt-3 text-muted-foreground">At Sena Strategy, we help boards separate these dynamics to make clear-headed investment decisions regardless of market sentiment.</p>
           </ArticleSection>
@@ -165,7 +165,7 @@ const AIBubble = () => {
             <p className="mt-2 text-muted-foreground">Global AI investment reached $252 billion in 2024, representing thirteen-fold growth since 2014. The eight largest hyperscalers will spend $371 billion on AI infrastructure in 2025 alone. Meta has committed $600 billion through 2028. OpenAI's valuation jumped from $29 billion in early 2023 to $500 billion by August 2025.</p>
             <p className="mt-2 text-muted-foreground">The startup ecosystem shows similar excess. Over 1,300 AI startups carry valuations exceeding $100 million, including 498 unicorns. This represents classic bubble indicators: rapid price appreciation, investment justified by transformative potential rather than current profitability, valuations requiring implausible growth rates.</p>
             <p className="mt-2 text-muted-foreground">The concentration of spending creates systemic risk. These companies trade with each other—OpenAI buying Nvidia chips, Microsoft providing OpenAI's cloud infrastructure—creating circular capital flows that ultimately require end-customer revenue to sustain.</p>
-            <p className="mt-2 text-muted-foreground">Funding quality is deteriorating. Morgan Stanley identifies a $1.5 trillion gap between what hyperscalers can fund internally and total infrastructure needs through 2028. This gap requires private credit and securitized finance with weaker underwriting standards. CoreWeave exemplifies the risk: $8 billion in debt, technical default status, revenue concentrated in two customers, economics dependent on renting rapidly depreciating GPUs.</p>
+            <p className="mt-2 text-muted-foreground">Funding quality is deteriorating. Morgan Stanley identifies a $1.5 trillion gap between what hyperscalers can fund internally and total infrastructure needs through 2028. This gap requires private credit and securitised finance with weaker underwriting standards. CoreWeave exemplifies the risk: $8 billion in debt, technical default status, revenue concentrated in two customers, economics dependent on renting rapidly depreciating GPUs.</p>
           </ArticleSection>
 
           <ArticleSection id="force3" title="Force 3: Residual Technology and Infrastructure" className="py-4 md:py-4">
@@ -173,18 +173,18 @@ const AIBubble = () => {
             <p className="mt-2 text-muted-foreground">The dot-com bubble burst dramatically in 2000, wiping out trillions in market value. But the internet infrastructure remained: fiber optic networks, data centers, software platforms, trained technical talent. Companies like Amazon and Google built trillion-dollar enterprises on this foundation, acquiring assets at deeply discounted prices during the bust.</p>
             <p className="mt-2 text-muted-foreground"><b>AI's residual infrastructure has unique characteristics:</b></p>
             <ul className="list-disc list-inside text-muted-foreground space-y-2">
-              <li><b>Physical assets depreciate rapidly.</b>GPUs have a three-year useful life for frontier applications before being relegated to lower-intensity tasks. Railway tracks lasted decades. Telecom fiber from the 1990s carries traffic today. AI infrastructure must generate returns within a handful of years, creating compressed payback windows that will surface problems quickly.</li>
-              <li><b>Intellectual property persists indefinitely.</b>Trained models, datasets, and architectural innovations don't depreciate. If companies face financial trouble, their model weights and training methodologies remain valuable. This IP gets acquired, open-sourced, or refinanced—it doesn't disappear.</li>
-              <li><b>Talent remains in the market.</b>AI researchers, engineers, and product specialists don't vanish when startups fail. They join other companies, carrying expertise forward.</li>
-              <li><b>Infrastructure becomes cheaper.</b>When excess capacity floods the market, prices drop dramatically. During the dot-com bust, data center space and bandwidth costs plummeted, enabling startups to build services that would have been economically impossible at peak bubble prices.</li>
+              <li><b>Physical assets depreciate rapidly.</b> GPUs have a three-year useful life for frontier applications before being relegated to lower-intensity tasks. Railway tracks lasted decades. Telecom fiber from the 1990s carries traffic today. AI infrastructure must generate returns within a handful of years, creating compressed payback windows that will surface problems quickly.</li>
+              <li><b>Intellectual property persists indefinitely.</b> Trained models, datasets, and architectural innovations don't depreciate. If companies face financial trouble, their model weights and training methodologies remain valuable. This IP gets acquired, open-sourced, or refinanced—it doesn't disappear.</li>
+              <li><b>Talent remains in the market.</b> AI researchers, engineers, and product specialists don't vanish when startups fail. They join other companies, carrying expertise forward.</li>
+              <li><b>Infrastructure becomes cheaper.</b> When excess capacity floods the market, prices drop dramatically. During the dot-com bust, data center space and bandwidth costs plummeted, enabling startups to build services that would have been economically impossible at peak bubble prices.</li>
               <li><b>What gets refinanced:</b> Hyperscalers like Microsoft, Amazon, and Google fund AI buildout from operating cash flow, giving them staying power. Debt-heavy operators will either refinance at worse terms, get acquired, or enter bankruptcy. Their physical assets get sold to stronger operators at discounts.</li>
             </ul>
           </ArticleSection>
             <ArticleSection id="diverge" title="When Financial and Technology Cycles Diverge" className="py-4 md:py-4">
-            <p className="text-muted-foreground">These three forces can—and often do—operate independently.</p>
+            <p className="text-muted-foreground"><b>These three forces can, and often do, operate independently.</b></p>
 
             <p className="mt-2 text-muted-foreground">History shows technology cycles persist through financial disruptions. The internet continued advancing through the dot-com crash. Cloud computing grew through the 2008 financial crisis. Technology adoption curves don't respect financial market timelines.</p>
-            <p className="mt-2 text-muted-foreground"><b>Scenario: The bubble deflates but technology remains</b></p>
+            <p className="mt-2 text-muted-foreground"><i>Scenario: The bubble deflates but technology remains</i></p>
             <p className="mt-2 text-muted-foreground">Imagine hyperscalers cut AI capex by 50%. Public market AI valuations drop 60%. Leading AI companies face down rounds or acquisitions. What happens to an enterprise deploying AI?</p>
             <p className="mt-2 text-muted-foreground">Compute costs drop as excess capacity floods the market. Distressed companies open-source models to maintain relevance. Engineers from failed startups join enterprises, improving implementation quality. Data centers get acquired by operators with stronger balance sheets, maintaining supply. Lower costs enable mid-market companies to deploy AI economically.</p>
             <p className="mt-2 text-muted-foreground">The technology curve continues—potentially at lower cost. Financial pain concentrates among investors and highly leveraged operators, not end users.</p>
@@ -217,7 +217,7 @@ const AIBubble = () => {
               <ul className="list-disc list-inside text-muted-foreground space-y-2 mt-2">
               <li><strong>Technology Adoption:</strong> Sustained decline in enterprise adoption, pilot programs consistently failing to reach production</li>
               <li><strong>Financial Bubble:</strong> Leading AI companies unable to demonstrate paths to profitability despite scale, major hyperscaler capital expenditure pullbacks, infrastructure increasingly funded by debt rather than cash flow</li>
-              <li><strong>Residual Infrastructure:</strong> Secondary markets for AI hardware collapsing, widespread underutilization of data centers, asset values falling below outstanding debt</li>
+              <li><strong>Residual Infrastructure:</strong> Secondary markets for AI hardware collapsing, widespread underutilisation of data centers, asset values falling below outstanding debt</li>
               </ul>
             </div>
           </ArticleSection>
@@ -228,10 +228,10 @@ const AIBubble = () => {
             <div className="mt-3">
               <div className="font-semibold">What boards should do:</div>
               <ol className="list-decimal list-inside text-muted-foreground space-y-2 mt-2">
-              <li>Distinguish which force drives each decision. Technology adoption decisions (building AI capabilities to solve business problems) deserve aggressive investment. Financial bubble considerations (vendor selection, capital deployment timing) require caution and optionality.</li>
-              <li>Demand demonstrated value, not potential. Measure actual productivity improvements and cost reductions, not projected benefits.</li>
-              <li>Focus on implementation capability, not technology access. Only 30% of pilots reach production. Integration complexity, change management, and organizational readiness are the constraints, not model availability.</li>
-              <li>Maintain strategic flexibility. Avoid lock-in to single vendors or proprietary platforms. The competitive landscape will shift dramatically as markets correct.</li>
+              <li><strong>Distinguish which force drives each decision. </strong>Technology adoption decisions (building AI capabilities to solve business problems) deserve aggressive investment. Financial bubble considerations (vendor selection, capital deployment timing) require caution and optionality.</li>
+              <li><strong>Demand demonstrated value, not potential. </strong>Measure actual productivity improvements and cost reductions, not projected benefits.</li>
+              <li><strong>Focus on implementation capability, not technology access. </strong>Only 30% of pilots reach production. Integration complexity, change management, and organisational readiness are the constraints, not model availability.</li>
+              <li><strong>Maintain strategic flexibility. </strong>Avoid lock-in to single vendors or proprietary platforms. The competitive landscape will shift dramatically as markets correct.</li>
               </ol>
             </div>
 
