@@ -190,7 +190,7 @@ export function ArticleHeader({ title, subtitle, progress, onNavClick, navItems 
                 <h2 className="text-lg font-semibold text-foreground line-clamp-1">{title}</h2>
                 {subtitle && <p className="text-sm text-muted-foreground line-clamp-1 md:line-clamp-none">{subtitle}</p>}
               </div>
-              <div className="flex flex-wrap gap-4 md:gap-6">
+              {/* <div className="flex flex-wrap gap-4 md:gap-6">
                 {items.map((item) => (
                   <button
                     key={item.id}
@@ -200,7 +200,7 @@ export function ArticleHeader({ title, subtitle, progress, onNavClick, navItems 
                     {item.label}
                   </button>
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="w-full h-1 bg-neutral-200">

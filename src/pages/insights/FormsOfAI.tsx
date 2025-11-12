@@ -6,6 +6,7 @@ import { ArticleHeader } from '@/components/article/ArticleHeader';
 import { ArticleSection } from '@/components/article/ArticleSection';
 import { useArticleScroll } from '@/hooks/use-article-scroll';
 import { useEffect } from 'react';
+import insightsMetadata from '@/data/insightsMetadata';
 
 const FormsOfAI = () => {
   const { readingProgress, scrollToSection } = useArticleScroll();
@@ -247,6 +248,15 @@ const FormsOfAI = () => {
               <li><a className="underline" href="https://diginomica.com/uipaths-agentic-automation-strategy-moving-enterprise-ai-beyond-productivity-plateau" target="_blank" rel="noreferrer">Fiserv agentic payment automation</a></li>
             </ul>
           </ArticleSection>
+
+    
+                        <div>                {(() => {
+                            const meta = insightsMetadata.find((i) => i.id === 'forms-of-ai');
+                            if (meta && meta.date) {
+                              return <div className="text-sm text-muted-foreground mt-1"><i>Published: {meta.date}</i></div>;
+                            }
+                            return null;
+                          })()}</div>
 
           {/* About the author card (keep our styled card) */}
           <Card className="mt-0 p-6 bg-card">

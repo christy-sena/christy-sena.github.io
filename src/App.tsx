@@ -6,6 +6,7 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Privacy from "./pages/Privacy";
 import FormsOfAI from "./pages/insights/FormsOfAI";
+import AIBubble from "./pages/insights/AIBubble";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,6 +21,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/insights/forms-of-ai" element={<FormsOfAI />} />
+          <Route path="/insights/ai-bubble" element={<AIBubble />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
