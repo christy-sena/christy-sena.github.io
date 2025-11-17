@@ -16,10 +16,10 @@ export const insightsMetadata = [
 
   {
     id: "agentic-ai",
-    title: "What is agentic AI?",
+    title: "Agentic AI: The next frontier for board-level attention",
     description:
-      "An explanation of what agentic AI is, how it differs from generative AI, and why boards and leaders should pay attention.",
-    date: "Coming Soon",
+      "When AI stops assisting and starts executing: the strategic shift from tools to autonomous systems.",
+    date: "17 November 2025",
   },
 ];
 

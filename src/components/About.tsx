@@ -46,7 +46,11 @@ const About = () => {
 
               <div className="p-10 bg-card rounded-md shadow-lg flex flex-col items-center">
                 <img src={christyImg} alt="Christy Chan" className="h-28 w-28 rounded-full object-cover mb-4" />
-                <h4 className="font-semibold text-xl">Christy Chan</h4>
+                <h4 className="font-semibold text-xl">
+                  <a href="https://christychan.cc" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                    Christy Chan
+                  </a>
+                </h4>
                 <p className="text-sm text-muted-foreground">Founding Consultant</p>
                 <p className="mt-3 text-sm text-foreground">A former Bain consultant with a background in computer engineering, Christy helps boards build the technical fluency and strategic clarity needed to lead on AI, translating complex technology trends into actionable decisions.</p>
               </div>
