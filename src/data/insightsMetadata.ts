@@ -1,5 +1,12 @@
 export const insightsMetadata = [
     {
+    id: "agentic-ai",
+    title: "Agentic AI: The next frontier for board-level attention",
+    description:
+      "When AI stops assisting and starts executing: the strategic shift from tools to autonomous systems.",
+    date: "17 November 2025",
+  },
+    {
     id: "ai-bubble",
     title: "Are we in an AI bubble?",
     description:
@@ -14,13 +21,7 @@ export const insightsMetadata = [
     date: "5 November 2025",
   },
 
-  {
-    id: "agentic-ai",
-    title: "Agentic AI: The next frontier for board-level attention",
-    description:
-      "When AI stops assisting and starts executing: the strategic shift from tools to autonomous systems.",
-    date: "17 November 2025",
-  },
+
 ];
 
 export default insightsMetadata;
