@@ -8,6 +8,7 @@ import Privacy from "./pages/Privacy";
 import FormsOfAI from "./pages/insights/FormsOfAI";
 import AIBubble from "./pages/insights/AIBubble";
 import AgenticAI from "./pages/insights/AgenticAI";
+import AILimitations from "./pages/insights/AILimitations";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/insights/forms-of-ai" element={<FormsOfAI />} />
           <Route path="/insights/ai-bubble" element={<AIBubble />} />
           <Route path="/insights/agentic-ai" element={<AgenticAI />} />
+          <Route path="/insights/ai-limitations" element={<AILimitations />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

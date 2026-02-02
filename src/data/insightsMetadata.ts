@@ -1,4 +1,11 @@
 export const insightsMetadata = [
+  {
+    id: "ai-limitations",
+    title: "Where AI stops being useful: A guide to drawing the line",
+    description:
+      "An explanation of where AI underperforms and limitations of the technology.",
+    date: "2 February 2026",
+  },
     {
     id: "agentic-ai",
     title: "Agentic AI: The next frontier for board-level attention",
