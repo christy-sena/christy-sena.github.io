@@ -1,11 +1,8 @@
-import { jonathan as jonathanImg, christy as christyImg, alex as alexImg } from "@/assets/profile";
+import { jonathan as jonathanImg, christy as christyImg, /* alex as alexImg — restore with Alex's card */ } from "@/assets/profile";
 
 const About = () => {
   return (
     <section id="about" className="py-section bg-background relative overflow-hidden">
-  {/* Dynamic Background Elements (static — pulse removed) */}
-  <div className="absolute top-0 right-1/4 w-96 h-96 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-3xl" />
-  <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-to-tr from-primary/10 to-transparent rounded-full blur-3xl" style={{ animationDelay: '1s' }} />
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
@@ -26,17 +23,18 @@ const About = () => {
           </h2>
           
           <div className="prose prose-lg mx-auto text-center space-y-6">
-            <p className="text-lg text-foreground leading-relaxed relative inline-block opacity-0 animate-slide-in stagger-2 group">
-              We are an AI-native strategy firm helping boards translate AI potential into measurable value through independent, financially-grounded consultancy.
+            <p className="text-lg text-foreground leading-relaxed opacity-0 animate-slide-in stagger-2">
+              Mid-market leadership teams know AI matters but are unable to translate it into action. They default to analysis paralysis or reactive spend — with no independent way to separate AI hype from AI value. 
             </p>
-            <p className="text-lg text-foreground leading-relaxed relative inline-block opacity-0 animate-slide-in stagger-2 group">
-              Our team combines deep experience in AI consulting, corporate strategy, and banking. We link AI opportunity with operational efficiency, revenue uplift, and cost discipline.        </p>
+            <p className="text-lg text-foreground leading-relaxed opacity-0 animate-slide-in stagger-2">
+              Sena provides a quantifiable AI transformation for your specific business, helping you to identify what truly moves the needle in your sector, where to act, what it's worth, and how to get there. We then help through the transformation process, with vendor selection, workflow design, change management, and adoption. We assess value across three areas: <strong>Commercial</strong>, <strong>Back-Office</strong>, and <strong>Product & Service Delivery</strong>.
+            </p>
           </div>
 
           {/* Team Section */}
             <div className="mt-16 text-center">
             <h3 className="text-heading font-serif font-semibold text-primary mb-6">Our Team</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-16 max-w-6xl mx-auto px-6 md:px-0">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-16 max-w-3xl mx-auto px-6 md:px-0">
               <div className="p-10 bg-card rounded-md shadow-lg flex flex-col items-center">
                 <img src={jonathanImg} alt="Jonathan Pfitzner" className="h-28 w-28 rounded-full object-cover mb-4" />
                 <h4 className="font-semibold text-xl">Jonathan Pfitzner</h4>
@@ -55,11 +53,13 @@ const About = () => {
                 <p className="mt-3 text-sm text-foreground">A former Bain consultant with a background in computer engineering, Christy helps boards build the technical fluency and strategic clarity needed to lead on AI, translating complex technology trends into actionable decisions.</p>
               </div>
 
+              {/* Alex Thacker — commented out, restore by uncommenting
               <div className="p-10 bg-card rounded-md shadow-lg flex flex-col items-center">
                 <img src={alexImg} alt="Alex Thacker" className="h-28 w-28 rounded-full object-cover mb-4" />
                 <h4 className="font-semibold text-xl">Alex Thacker</h4>
                 <p className="mt-3 text-sm text-foreground">With specialisms in AI, data and cybersecurity, Alex is an M&A advisor and venture investor. He brings first-hand insight into which technologies and vendors are shaping the market, aligning strategic priorities with investment readiness.</p>
               </div>
+              */}
             </div>
           </div>
         </div>

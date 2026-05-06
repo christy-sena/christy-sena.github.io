@@ -139,16 +139,13 @@ All colors MUST be HSL.
   }
   
   .hero-gradient {
-    background: linear-gradient(135deg, 
-      hsl(var(--gradient-start)) 0%, 
-      hsl(var(--gradient-mid)) 50%, 
-      hsl(var(--gradient-end)) 100%);
+    background: hsl(var(--primary));
   }
   
   .strategy-grid-pattern {
-    background-image: 
-      linear-gradient(hsla(0, 0%, 100%, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, hsla(0, 0%, 100%, 0.03) 1px, transparent 1px);
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 59px, hsla(0, 0%, 100%, 0.04) 59px, hsla(0, 0%, 100%, 0.04) 60px),
+      repeating-linear-gradient(90deg, transparent, transparent 59px, hsla(0, 0%, 100%, 0.04) 59px, hsla(0, 0%, 100%, 0.04) 60px);
     background-size: 60px 60px;
   }
   

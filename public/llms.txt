@@ -1,0 +1,35 @@
+# Sena Strategy
+
+> Independent AI strategy consultancy for UK mid-market businesses.
+
+Sena Strategy gives mid-market leadership teams a prioritised, quantified AI action plan built for their specific business — what's real in their sector, where to act, and what it's worth.
+
+## The problem we solve
+
+Mid-market leadership teams know AI matters but can't translate it into action. They default to analysis paralysis or reactive spend, with no independent way to separate AI hype from AI value in the boardroom.
+
+## Who we work with
+
+UK mid-market businesses, £10–100m revenue. Owner-operator or PE-backed. Sector-agnostic. We focus on the band where AI pressure is acute and internal capability to act on it is missing.
+
+## Services
+
+- **AI Maturity Assessment** — Structured diagnostic across Commercial, Back-Office, and Product & Service Delivery. ~70 AI capabilities scored, benchmarked against peers, with a ranked opportunity list and quantified value.
+- **Vendor Selection & Workflow Design** — Independent evaluation of AI vendors and tools, with current workflows mapped and AI insertion points designed end-to-end.
+- **Change Management & Adoption** — Hands-on support through implementation: operating model adjustments, training plans, KPI dashboards, and 30/60/90-day checkpoints.
+- **Executive Education** — AI literacy programmes for boards and leadership teams, including workshops, AI Days, and GenAI Academy sessions.
+
+## Why we are different
+
+Most strategy consultants cannot evaluate AI technically. Most AI technologists cannot structure a business case. Sena combines Imperial AI/ML engineering with Bain-trained diagnostic methodology. Prioritisation uses value × feasibility, where feasibility is assessed through real technical judgement — filtering out AI that sounds good but will not work for a specific client.
+
+## Team
+
+- **Christy Chan** — Founding Consultant. MEng AI/ML, Imperial College. Former Bain consultant where she led internal generative AI strategy.
+- **Jonathan Pfitzner** — Partner. Extensive experience in corporate strategy, M&A banking, and venture investing.
+
+## Contact
+
+- Email: contact@senastrategy.ai
+- Website: https://senastrategy.ai
+- LinkedIn: https://linkedin.com/company/sena-strategy-ai

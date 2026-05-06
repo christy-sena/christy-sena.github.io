@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Privacy from "./pages/Privacy";
+import OurApproach from "./pages/OurApproach";
 import FormsOfAI from "./pages/insights/FormsOfAI";
 import AIBubble from "./pages/insights/AIBubble";
 import AgenticAI from "./pages/insights/AgenticAI";
@@ -22,6 +23,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/our-approach" element={<OurApproach />} />
           <Route path="/insights/forms-of-ai" element={<FormsOfAI />} />
           <Route path="/insights/ai-bubble" element={<AIBubble />} />
           <Route path="/insights/agentic-ai" element={<AgenticAI />} />
