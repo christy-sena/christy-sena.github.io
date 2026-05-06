@@ -4,18 +4,18 @@ import { FileText, Zap, MapPin } from "lucide-react";
 const services = [
   {
     icon: FileText,
-    title: "Board AI workshop",
-    description: "Rapid board-level diagnostic and prioritisation, to identify pain points and prioritise opportunities"
+    title: "AI readiness and competitive positioning",
+    description: "Assess your tech foundations, benchmark against competitors, and map the AI capabilities worth building"
   },
   {
     icon: Zap,
-    title: "AI opportunity assessment",
-    description: "Translate pain points into a ranked, quantified pipeline, value/risk-mapped aligned to business strategy and competitive positioning"
+    title: "ROI framework and business case development",
+    description: "Quantify which AI opportunities deliver value fastest and which warrant longer investment horizons"
   },
   {
     icon: MapPin,
     title: "Strategic AI roadmap",
-    description: "Translate pipeline into a multi-month roadmap including readiness assessment, tech recommendations, change plan and benchmarks"
+    description: "Turn business cases into a 6-month execution plan with owners, vendors, milestones, and governance built in"
   }
 ];
 
