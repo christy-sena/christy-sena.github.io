@@ -5,11 +5,46 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-
 <url>
   <loc>https://senastrategy.ai/</loc>
-  <lastmod>2025-10-23T17:44:35+00:00</lastmod>
+  <lastmod>2026-05-06T00:00:00+00:00</lastmod>
+  <priority>1.0</priority>
 </url>
 
+<url>
+  <loc>https://senastrategy.ai/#/our-approach</loc>
+  <lastmod>2026-05-06T00:00:00+00:00</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://senastrategy.ai/#/insights/forms-of-ai</loc>
+  <lastmod>2026-05-06T00:00:00+00:00</lastmod>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://senastrategy.ai/#/insights/ai-bubble</loc>
+  <lastmod>2026-05-06T00:00:00+00:00</lastmod>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://senastrategy.ai/#/insights/agentic-ai</loc>
+  <lastmod>2026-05-06T00:00:00+00:00</lastmod>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://senastrategy.ai/#/insights/ai-limitations</loc>
+  <lastmod>2026-05-06T00:00:00+00:00</lastmod>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://senastrategy.ai/#/privacy</loc>
+  <lastmod>2026-05-06T00:00:00+00:00</lastmod>
+  <priority>0.3</priority>
+</url>
 
 </urlset>

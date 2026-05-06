@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Menu, X, Home, Users, Briefcase, BookOpen, Mail } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { Menu, X, Home, Users, Briefcase, BookOpen, Mail, Lightbulb } from "lucide-react";
 
-const sections = [
+const scrollSections = [
   { id: "home", label: "Home", icon: <Home className="w-5 h-5" /> },
   { id: "about", label: "About", icon: <Users className="w-5 h-5" /> },
   { id: "services", label: "Services", icon: <Briefcase className="w-5 h-5" /> },
@@ -9,13 +10,29 @@ const sections = [
   { id: "contact", label: "Contact", icon: <Mail className="w-5 h-5" /> },
 ];
 
+const pageLinks = [
+  { href: "/our-approach", label: "Our Approach", icon: <Lightbulb className="w-5 h-5" /> },
+];
+
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  function onNavigate(id: string) {
+  function onScrollNavigate(id: string) {
     setOpen(false);
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (location.pathname !== "/") {
+      sessionStorage.setItem("sena:scrollTo", id);
+      navigate("/");
+    } else {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+
+  function onPageNavigate(href: string) {
+    setOpen(false);
+    navigate(href);
   }
 
   return (
@@ -34,17 +51,29 @@ export default function Nav() {
 
         <nav className={`absolute top-20 left-4 md:left-8 md:top-24 w-64 md:w-80 bg-background rounded-md shadow-xl p-4 transform ${open ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
           <ul className="space-y-2">
-            {sections.map(s => (
+            {scrollSections.map(s => (
               <li key={s.id}>
                 <button
-                  onClick={() => onNavigate(s.id)}
+                  onClick={() => onScrollNavigate(s.id)}
                   className="w-full text-left flex items-center gap-3 p-2 rounded hover:bg-primary/5 transition-colors"
                 >
-                  <span className="text-primary-foreground">{s.icon}</span>
+                  <span className="text-primary">{s.icon}</span>
                   <span className="text-sm font-medium">{s.label}</span>
                 </button>
               </li>
             ))}
+            <li className="pt-2 border-t border-border">
+              {pageLinks.map(p => (
+                <button
+                  key={p.href}
+                  onClick={() => onPageNavigate(p.href)}
+                  className="w-full text-left flex items-center gap-3 p-2 rounded hover:bg-primary/5 transition-colors"
+                >
+                  <span className="text-primary">{p.icon}</span>
+                  <span className="text-sm font-medium">{p.label}</span>
+                </button>
+              ))}
+            </li>
           </ul>
         </nav>
       </div>

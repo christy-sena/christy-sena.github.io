@@ -17,12 +17,9 @@ const Hero = () => {
 
   return (
   <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary">
-      {/* Animated Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/90" />
-      
-      {/* Dynamic Grid Pattern */}
-      <div className="absolute inset-0 strategy-grid-pattern opacity-30 animate-pulse-glow" />
-      
+      {/* Grid Pattern */}
+      <div className="absolute inset-0 strategy-grid-pattern opacity-30" />
+
       {/* Floating Particles */}
       {particles.map((particle) => (
         <div
@@ -35,11 +32,6 @@ const Hero = () => {
           }}
         />
       ))}
-      
-      {/* Removed the two horizon line elements to avoid stray lines outside the grid */}
-      
-      {/* Radial Glow Effect */}
-      <div className="absolute inset-0 bg-gradient-radial from-primary-foreground/5 via-transparent to-transparent" />
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
@@ -67,15 +59,9 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Dynamic Corner Accents */}
-      <div className="absolute top-0 right-0 w-32 h-32 border-t-2 border-r-2 border-primary-foreground/20 animate-pulse" />
-      <div className="absolute bottom-0 left-0 w-32 h-32 border-b-2 border-l-2 border-primary-foreground/20 animate-pulse" 
-           style={{ animationDelay: '1s' }} />
-      
-      {/* Corner Glow Effects */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-primary-foreground/5 blur-3xl rounded-full animate-pulse-glow" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary-foreground/5 blur-3xl rounded-full animate-pulse-glow" 
-           style={{ animationDelay: '1.5s' }} />
+      {/* Corner Accents */}
+      <div className="absolute top-0 right-0 w-32 h-32 border-t-2 border-r-2 border-primary-foreground/20" />
+      <div className="absolute bottom-0 left-0 w-32 h-32 border-b-2 border-l-2 border-primary-foreground/20" />
     </section>
   );
 };
