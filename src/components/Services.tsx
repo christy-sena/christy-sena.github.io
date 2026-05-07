@@ -26,6 +26,27 @@ const services = [
 
 const MAX_VISIBLE = 3;
 
+const ServiceCard = ({ service, index }: { service: typeof services[0]; index: number }) => (
+  <div
+    className="group bg-white border border-[#C0C0C0]/40 rounded-sm p-8 shadow-sm hover:shadow-md hover:border-primary/40 transition-all duration-300 relative overflow-hidden hover:-translate-y-1 opacity-0 animate-slide-in"
+    style={{ animationDelay: `${index * 0.1}s` }}
+  >
+    <div className="absolute top-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-500" />
+
+    <div className="mb-6 w-20 h-20 rounded-full border-2 border-primary/30 flex items-center justify-center group-hover:border-primary group-hover:bg-primary/5 transition-all duration-300 mx-auto">
+      <service.icon className="h-8 w-8 text-primary transition-all duration-300" />
+    </div>
+
+    <h3 className="text-subheading font-serif font-semibold text-primary mb-4 group-hover:text-primary-hover transition-colors duration-300">
+      {service.title}
+    </h3>
+
+    <p className="text-muted-foreground leading-relaxed text-sm group-hover:text-foreground/80 transition-colors duration-300">
+      {service.description}
+    </p>
+  </div>
+);
+
 const Services = () => {
   const [startIndex, setStartIndex] = useState(0);
   const total = services.length;
@@ -47,62 +68,54 @@ const Services = () => {
         </div>
 
         <div className="relative">
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {visible.map((service, index) => (
-              <div
-                key={startIndex + index}
-                className="group bg-white border border-[#C0C0C0]/40 rounded-sm p-8 shadow-sm hover:shadow-md hover:border-primary/40 transition-all duration-300 relative overflow-hidden hover:-translate-y-1 opacity-0 animate-slide-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="absolute top-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-500" />
-
-                <div className="mb-6 w-20 h-20 rounded-full border-2 border-primary/30 flex items-center justify-center group-hover:border-primary group-hover:bg-primary/5 transition-all duration-300 mx-auto">
-                  <service.icon className="h-8 w-8 text-primary transition-all duration-300" />
-                </div>
-
-                <h3 className="text-subheading font-serif font-semibold text-primary mb-4 group-hover:text-primary-hover transition-colors duration-300">
-                  {service.title}
-                </h3>
-
-                <p className="text-muted-foreground leading-relaxed text-sm group-hover:text-foreground/80 transition-colors duration-300">
-                  {service.description}
-                </p>
-              </div>
+          {/* Mobile: all 4 cards stacked */}
+          <div className="flex flex-col gap-6 md:hidden">
+            {services.map((service, index) => (
+              <ServiceCard key={index} service={service} index={index} />
             ))}
           </div>
 
-          {total > MAX_VISIBLE && (
-            <div className="flex items-center justify-center gap-4 mt-10">
-              <button
-                onClick={() => setStartIndex(i => i - 1)}
-                disabled={!canGoBack}
-                aria-label="Previous services"
-                className="p-2 rounded-full border border-primary/30 hover:border-primary hover:bg-primary/5 transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
-              >
-                <ChevronLeft className="w-5 h-5 text-primary" />
-              </button>
-
-              <div className="flex gap-2">
-                {Array.from({ length: total - MAX_VISIBLE + 1 }).map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setStartIndex(i)}
-                    aria-label={`Go to service set ${i + 1}`}
-                    className={`h-2 rounded-full transition-all duration-300 ${i === startIndex ? "bg-primary w-6" : "bg-primary/30 w-2 hover:bg-primary/60"}`}
-                  />
-                ))}
-              </div>
-
-              <button
-                onClick={() => setStartIndex(i => i + 1)}
-                disabled={!canGoForward}
-                aria-label="Next services"
-                className="p-2 rounded-full border border-primary/30 hover:border-primary hover:bg-primary/5 transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
-              >
-                <ChevronRight className="w-5 h-5 text-primary" />
-              </button>
+          {/* Desktop: 3-card carousel */}
+          <div className="hidden md:block">
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {visible.map((service, index) => (
+                <ServiceCard key={startIndex + index} service={service} index={index} />
+              ))}
             </div>
-          )}
+
+            {total > MAX_VISIBLE && (
+              <div className="flex items-center justify-center gap-4 mt-10">
+                <button
+                  onClick={() => setStartIndex(i => i - 1)}
+                  disabled={!canGoBack}
+                  aria-label="Previous services"
+                  className="p-2 rounded-full border border-primary/30 hover:border-primary hover:bg-primary/5 transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
+                >
+                  <ChevronLeft className="w-5 h-5 text-primary" />
+                </button>
+
+                <div className="flex gap-2">
+                  {Array.from({ length: total - MAX_VISIBLE + 1 }).map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setStartIndex(i)}
+                      aria-label={`Go to service set ${i + 1}`}
+                      className={`h-2 rounded-full transition-all duration-300 ${i === startIndex ? "bg-primary w-6" : "bg-primary/30 w-2 hover:bg-primary/60"}`}
+                    />
+                  ))}
+                </div>
+
+                <button
+                  onClick={() => setStartIndex(i => i + 1)}
+                  disabled={!canGoForward}
+                  aria-label="Next services"
+                  className="p-2 rounded-full border border-primary/30 hover:border-primary hover:bg-primary/5 transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
+                >
+                  <ChevronRight className="w-5 h-5 text-primary" />
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </section>

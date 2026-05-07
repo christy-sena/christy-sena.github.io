@@ -24,10 +24,10 @@ const About = () => {
           
           <div className="prose prose-lg mx-auto text-center space-y-6">
             <p className="text-lg text-foreground leading-relaxed opacity-0 animate-slide-in stagger-2">
-              Mid-market leadership teams know AI matters but are unable to translate it into action. They default to analysis paralysis or reactive spend — with no independent way to separate AI hype from AI value. 
+             Mid-market leadership teams know AI matters, but knowing it matters and acting on it deliberately are different things. The default is reactive spend: tools chosen under pressure, bolted onto processes without a clear use case, with no way to know whether any of it has actually improved margin, efficiency, or enabled faster growth.
             </p>
             <p className="text-lg text-foreground leading-relaxed opacity-0 animate-slide-in stagger-2">
-              Sena provides a quantifiable AI transformation for your specific business, helping you to identify what truly moves the needle in your sector, where to act, what it's worth, and how to get there. We then help through the transformation process, with vendor selection, workflow design, change management, and adoption. We assess value across three areas: <strong>Commercial</strong>, <strong>Back-Office</strong>, and <strong>Product & Service Delivery</strong>.
+              Sena provides a quantifiable, verifiable AI transformation for your specific business, helping you to identify what truly moves the needle in your sector, where to act, what it's worth, and how to get there. We then help through the transformation process, with vendor selection, workflow design, change management, and adoption. 
             </p>
           </div>
 
